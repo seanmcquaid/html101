@@ -15,6 +15,7 @@
         } */
         #gallery-wrapper {
             border: 2px solid red;
+            text-align: center;
         }
         #top-section {
             border: 2px solid blue;
@@ -22,7 +23,16 @@
         #middle-section {
             border: 2px solid rgb(0,255,0);
         }
-        
+        #bottom-section {
+            border: 2px solid pink;
+        }
+        .thumb {
+            /* Try to % with width */
+            width: 15%;
+        }
+        img {
+            width: 1000px;
+        }
     </style>
 
 </head>
@@ -33,13 +43,20 @@
         <div id="top-section">
             <h1>A Photo Gallery made with CSS, HTML, a tiny bit of JS and a whole lot of love</h1>
         </div>
-
+        <!-- An id is unique, only one time on a page -->
+        <!-- a class is not unique but groups things together -->
         <div id="middle-section">
             <h2>Middle Section</h2>
+            <img class="thumb" src="ga_pics/arabia_mnt.jpg" onclick="bigImage.src = this.src"/>
+            <img class="thumb" src="ga_pics/callaway_gardens.jpg" onclick="bigImage.src = this.src"/>
+            <img class="thumb" src="ga_pics/prov_state_canyon.jpg" onclick="bigImage.src = this.src"/>
+            <img class="thumb" src="ga_pics/wormsloe.jpg" onclick="bigImage.src = this.src"/>
+            <img class="thumb" src="ga_pics/Etowah_Indian_Mounds.jpg" onmouseover="bigImage.src = this.src"/>
         </div>
 
         <div id="bottom-section">
             <h2>Bottom Section</h2>
+            <img src="ga_pics/Etowah_Indian_Mounds.jpg" name="bigImage"/>
         </div>
 
     </div>
